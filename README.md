@@ -24,10 +24,12 @@ This monorepo includes a few apps and packages.
 
 ### Apps and Packages
 
-- `apps/website-ssr`: a Next.js app with Tailwind CSS
-- `apps/website`: another Next.js app with Tailwind CSS
-- `packages/ui`: a stub React component library with Tailwind CSS, shared by both `website-ssr` and `website` apps
-- `packages/utils`: utilities shared by both `website-ssr` and `website` apps
+- `apps/pwa-app`: a Next.js app with Tailwind CSS
+- `apps/claim-app`: another Next.js app with Tailwind CSS
+- `apps/lens-oracle`: a Hardhat project for the Consumer Contract that is compatible with a deployed LensAPI Oracle
+- `apps/lens-api-code-examples`: an app with code examples for the LensAPI 
+- `packages/ui`: a stub React component library with Tailwind CSS, shared by both `pwa-app` and `claim-app` apps
+- `packages/utils`: utilities shared by both `pwa-app` and `claim-app` apps
 - `packages/eslint-config-custom`: shared ESLint configuration
 - `packages/jest-config`: shared Jest configuration
 - `packages/lighthouse-config`: shared Lighthouse configuration
@@ -49,7 +51,7 @@ pnpm install
 
 ### Develop Next.js
 
-If you want to start `apps/website-ssr` and `apps/website` in development mode, and watch for changes in `packages/ui`, run at the root:
+If you want to start `apps/pwa-app` and `apps/claim-app` in development mode, and watch for changes in `packages/ui`, run at the root:
 
 ```
 pnpm dev
@@ -57,7 +59,7 @@ pnpm dev
 
 ### Build Next.js
 
-If you want to build `apps/website-ssr` and `apps/website` for production, run at the root:
+If you want to build `apps/pwa-app` and `apps/claim-app` for production, run at the root:
 
 ```
 pnpm build
@@ -71,7 +73,7 @@ ANALYZE=true pnpm build
 
 ### Preview Next.js
 
-If you want to preview production builds of `apps/website-ssr` and `apps/website`, run at the root:
+If you want to preview production builds of `apps/pwa-app` and `apps/claim-app`, run at the root:
 
 ```
 pnpm start

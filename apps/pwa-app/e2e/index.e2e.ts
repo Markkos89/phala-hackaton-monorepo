@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-const basePath = "/website-ssr";
+const basePath = "/pwa-app";
 
 test("has title", async ({ page }) => {
   await page.goto(basePath);

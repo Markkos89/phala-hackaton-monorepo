@@ -1,7 +1,7 @@
 {
   "folders": [
-    { "path": "apps/website-ssr", "name": "apps/website-ssr" },
-    { "path": "apps/website", "name": "apps/website" },
+    { "path": "apps/pwa-app", "name": "apps/pwa-app" },
+    { "path": "apps/claim-app", "name": "apps/claim-app" },
     { "path": "apps/lens-oracle", "name": "apps/lens-oracle" },
     { "path": "packages/ui", "name": "packages/ui" },
     { "path": "packages/utils", "name": "packages/utils" },
@@ -171,10 +171,10 @@
       {
         "type": "node",
         "request": "launch",
-        "name": "Debug unit test (apps/website-ssr)",
+        "name": "Debug unit test (apps/pwa-app)",
         "runtimeExecutable": "pnpm",
         "runtimeArgs": ["test:unit", "${file}"],
-        "cwd": "${workspaceFolder:apps/website-ssr}"
+        "cwd": "${workspaceFolder:apps/pwa-app}"
       },
       {
         "type": "node",
@@ -187,10 +187,10 @@
       {
         "type": "node",
         "request": "launch",
-        "name": "Debug unit test (apps/website)",
+        "name": "Debug unit test (apps/claim-app)",
         "runtimeExecutable": "pnpm",
         "runtimeArgs": ["test:unit", "${file}"],
-        "cwd": "${workspaceFolder:apps/website}"
+        "cwd": "${workspaceFolder:apps/claim-app}"
       },
       {
         "type": "node",
