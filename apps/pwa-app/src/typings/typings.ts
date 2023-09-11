@@ -20,7 +20,7 @@ export interface ICommon {
     };
     metaSocial?: {
       id: string;
-      socialNetwork?: 'Facebook' | 'Twitter';
+      socialNetwork?: "Facebook" | "Twitter";
       title?: string;
       description?: string;
       image?: {
@@ -42,6 +42,18 @@ export interface Github {
   stars: number;
 }
 
-export type InputProps = {
-  typeOfInput: 'text' | 'url' | 'email' | 'tel' | 'vCard' | 'wifi' | 'sms';
-};
+export interface InputProps {
+  typeOfInput: "text" | "url" | "email" | "tel" | "vCard" | "wifi" | "sms";
+}
+
+export interface ConfigType {
+  varName: string;
+  varValue: string;
+}
+
+export interface ConfigApiResponse {
+  varName: string;
+  varValue: string;
+  _id: string;
+  __v: number;
+}

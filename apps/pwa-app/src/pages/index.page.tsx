@@ -2,6 +2,9 @@ import type { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import Head from "next/head";
 import { Container } from "ui";
 
+import Config from "@/components/Config";
+import LoginComponent from "@/components/Login";
+
 export default function Home({ pwa }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   return (
     <>
@@ -24,6 +27,12 @@ export default function Home({ pwa }: InferGetServerSidePropsType<typeof getServ
           <div className="mx-auto mt-5 flex max-w-xl justify-center md:mt-8">
             {`SSR Working ? ${pwa ? "SSR ON!" : "Not Working - Something went wrong?"}`}
           </div>
+        </main>
+      </Container>
+      <Container>
+        <main>
+          <LoginComponent />
+          <Config />
         </main>
       </Container>
     </>

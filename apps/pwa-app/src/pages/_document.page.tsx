@@ -28,6 +28,11 @@ class MyDocument extends Document {
           />
 
           <meta name="Turbo Monorepo" content="Turbo Monorepo" />
+          <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
+          />
+
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="apple-mobile-web-app-status-bar-style" content="default" />
           <meta name="apple-mobile-web-app-title" content="Turbo Monorepo" />

@@ -6,6 +6,8 @@ const links = {
     { children: "Features", href: "#features", variant: "text" },
     { children: "Testimonials", href: "#testimonials", variant: "text" },
     { children: "Pricing", href: "#pricing", variant: "text" },
+    { children: "Login", href: "#login", variant: "text" },
+    { children: "Register", href: "#register", variant: "text" },
   ],
   rightLinks: [
     {
