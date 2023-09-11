@@ -1,0 +1,11 @@
+{
+  "extends": "typescript-config/oracle.json",
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["*"]
+    }
+  },
+  "include": ["next-env.d.ts", "src", "e2e"],
+  "exclude": ["cache", "node_modules", "cache", "artifacts"]
+}
