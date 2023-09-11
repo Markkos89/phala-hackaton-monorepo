@@ -1,4 +1,4 @@
 module.exports = require("playwright-config/playwright.config")({
-  basePath: "/website-ssrr",
+  basePath: "/pwa-app",
   port: 3001,
 });

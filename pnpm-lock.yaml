@@ -87,6 +87,55 @@ importers:
         specifier: 5.1.6
         version: 5.1.6
 
+  apps/claim-app-pwa:
+    dependencies:
+      '@headlessui/react':
+        specifier: 1.7.15
+        version: 1.7.15(react-dom@18.2.0)(react@18.2.0)
+      clsx:
+        specifier: 2.0.0
+        version: 2.0.0
+      next:
+        specifier: 13.4.12
+        version: 13.4.12(@babel/core@7.22.9)(react-dom@18.2.0)(react@18.2.0)
+      next-themes:
+        specifier: 0.2.1
+        version: 0.2.1(next@13.4.12)(react-dom@18.2.0)(react@18.2.0)
+      react:
+        specifier: 18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: 18.2.0
+        version: 18.2.0(react@18.2.0)
+      ui:
+        specifier: workspace:*
+        version: link:../../packages/ui
+      utils:
+        specifier: workspace:*
+        version: link:../../packages/utils
+    devDependencies:
+      jest-config:
+        specifier: workspace:*
+        version: link:../../packages/jest-config
+      lighthouse-config:
+        specifier: workspace:*
+        version: link:../../packages/lighthouse-config
+      next-config:
+        specifier: workspace:*
+        version: link:../../packages/next-config
+      playwright-config:
+        specifier: workspace:*
+        version: link:../../packages/playwright-config
+      storybook-config:
+        specifier: workspace:*
+        version: link:../../packages/storybook-config
+      tailwindcss-config:
+        specifier: workspace:*
+        version: link:../../packages/tailwindcss-config
+      typescript-config:
+        specifier: workspace:*
+        version: link:../../packages/typescript-config
+
   apps/lens-api-code-examples:
     dependencies:
       '@apollo/client':
@@ -118,7 +167,7 @@ importers:
         version: 16.3.0
       ipfs-http-client:
         specifier: ^56.0.3
-        version: 56.0.3(node-fetch@2.6.12)
+        version: 56.0.3(node-fetch@3.3.2)
       omit-deep:
         specifier: ^0.3.0
         version: 0.3.0
@@ -245,56 +294,7 @@ importers:
         specifier: workspace:*
         version: link:../../packages/typescript-config
 
-  apps/website:
-    dependencies:
-      '@headlessui/react':
-        specifier: 1.7.15
-        version: 1.7.15(react-dom@18.2.0)(react@18.2.0)
-      clsx:
-        specifier: 2.0.0
-        version: 2.0.0
-      next:
-        specifier: 13.4.12
-        version: 13.4.12(@babel/core@7.22.9)(react-dom@18.2.0)(react@18.2.0)
-      next-themes:
-        specifier: 0.2.1
-        version: 0.2.1(next@13.4.12)(react-dom@18.2.0)(react@18.2.0)
-      react:
-        specifier: 18.2.0
-        version: 18.2.0
-      react-dom:
-        specifier: 18.2.0
-        version: 18.2.0(react@18.2.0)
-      ui:
-        specifier: workspace:*
-        version: link:../../packages/ui
-      utils:
-        specifier: workspace:*
-        version: link:../../packages/utils
-    devDependencies:
-      jest-config:
-        specifier: workspace:*
-        version: link:../../packages/jest-config
-      lighthouse-config:
-        specifier: workspace:*
-        version: link:../../packages/lighthouse-config
-      next-config:
-        specifier: workspace:*
-        version: link:../../packages/next-config
-      playwright-config:
-        specifier: workspace:*
-        version: link:../../packages/playwright-config
-      storybook-config:
-        specifier: workspace:*
-        version: link:../../packages/storybook-config
-      tailwindcss-config:
-        specifier: workspace:*
-        version: link:../../packages/tailwindcss-config
-      typescript-config:
-        specifier: workspace:*
-        version: link:../../packages/typescript-config
-
-  apps/website-ssr:
+  apps/pwa-app:
     dependencies:
       '@headlessui/react':
         specifier: 1.7.15
@@ -4520,7 +4520,7 @@ packages:
       is-glob: 4.0.3
       open: 9.1.0
       picocolors: 1.0.0
-      tslib: 2.6.1
+      tslib: 2.6.2
     dev: false
 
   /@playwright/test@1.36.1:
@@ -8242,14 +8242,14 @@ packages:
     resolution: {integrity: sha512-c27loCv9QkZinsa5ProX751khO9DJl/AcB5c2KNtA6NRvHKS0PgLfcftz72KVq504vB0Gku5s2kUZzDBvQWvHg==}
     engines: {node: '>=4'}
     dependencies:
-      tslib: 2.6.1
+      tslib: 2.6.2
     dev: true
 
   /ast-types@0.16.1:
     resolution: {integrity: sha512-6t10qk83GOG8p0vKmaCr8eiilZwO171AvbROMtvvNiwrTly62t+7XkA8RdIIVbpMhCASAsxgAzdRSwh6nw/5Dg==}
     engines: {node: '>=4'}
     dependencies:
-      tslib: 2.6.1
+      tslib: 2.6.2
     dev: true
 
   /astral-regex@2.0.0:
@@ -10228,11 +10228,11 @@ packages:
     resolution: {integrity: sha512-+HlytyjlPKnIG8XuRG8WvmBP8xs8P71y+SKKS6ZXWoEgLuePxtDoUEiH7WkdePWrQ5JBpE6aoVqfZfJUQkjXwA==}
     dev: true
 
-  /dns-over-http-resolver@1.2.3(node-fetch@2.6.12):
+  /dns-over-http-resolver@1.2.3(node-fetch@3.3.2):
     resolution: {integrity: sha512-miDiVSI6KSNbi4SVifzO/reD8rMnxgrlnkrlkugOLQpWQTe2qMdHsZp5DmfKjxNE+/T3VAAYLQUZMv9SMr6+AA==}
     dependencies:
       debug: 4.3.4(supports-color@8.1.1)
-      native-fetch: 3.0.0(node-fetch@2.6.12)
+      native-fetch: 3.0.0(node-fetch@3.3.2)
       receptacle: 1.3.2
     transitivePeerDependencies:
       - node-fetch
@@ -12934,21 +12934,21 @@ packages:
     engines: {node: '>= 0.10'}
     dev: true
 
-  /ipfs-core-types@0.10.3(node-fetch@2.6.12):
+  /ipfs-core-types@0.10.3(node-fetch@3.3.2):
     resolution: {integrity: sha512-GNid2lRBjR5qgScCglgk7w9Hk3TZAwPHQXxOLQx72wgyc0jF2U5NXRoKW0GRvX8NPbHmsrFszForIqxd23I1Gw==}
     deprecated: js-IPFS has been deprecated in favour of Helia - please see https://github.com/ipfs/js-ipfs/issues/4336 for details
     dependencies:
       '@ipld/dag-pb': 2.1.18
       interface-datastore: 6.1.1
       ipfs-unixfs: 6.0.9
-      multiaddr: 10.0.1(node-fetch@2.6.12)
+      multiaddr: 10.0.1(node-fetch@3.3.2)
       multiformats: 9.9.0
     transitivePeerDependencies:
       - node-fetch
       - supports-color
     dev: false
 
-  /ipfs-core-utils@0.14.3(node-fetch@2.6.12):
+  /ipfs-core-utils@0.14.3(node-fetch@3.3.2):
     resolution: {integrity: sha512-aBkewVhgAj3NWXPwu6imj0wADGiGVZmJzqKzODOJsibDjkx6FGdMv8kvvqtLnK8LS/dvSk9yk32IDtuDyYoV7Q==}
     deprecated: js-IPFS has been deprecated in favour of Helia - please see https://github.com/ipfs/js-ipfs/issues/4336 for details
     dependencies:
@@ -12957,7 +12957,7 @@ packages:
       browser-readablestream-to-it: 1.0.3
       debug: 4.3.4(supports-color@8.1.1)
       err-code: 3.0.1
-      ipfs-core-types: 0.10.3(node-fetch@2.6.12)
+      ipfs-core-types: 0.10.3(node-fetch@3.3.2)
       ipfs-unixfs: 6.0.9
       ipfs-utils: 9.0.14
       it-all: 1.0.6
@@ -12965,8 +12965,8 @@ packages:
       it-peekable: 1.0.3
       it-to-stream: 1.0.0
       merge-options: 3.0.4
-      multiaddr: 10.0.1(node-fetch@2.6.12)
-      multiaddr-to-uri: 8.0.0(node-fetch@2.6.12)
+      multiaddr: 10.0.1(node-fetch@3.3.2)
+      multiaddr-to-uri: 8.0.0(node-fetch@3.3.2)
       multiformats: 9.9.0
       nanoid: 3.3.6
       parse-duration: 1.1.0
@@ -12978,7 +12978,7 @@ packages:
       - supports-color
     dev: false
 
-  /ipfs-http-client@56.0.3(node-fetch@2.6.12):
+  /ipfs-http-client@56.0.3(node-fetch@3.3.2):
     resolution: {integrity: sha512-E3L5ylVl6BjyRUsNehvfuRBYp1hj8vQ8in4zskVPMNzXs6JiCFUbif5a6BtcAlSK4xPQyJCeLNNAWLUeFQTLNA==}
     engines: {node: '>=15.0.0', npm: '>=3.0.0'}
     dependencies:
@@ -12989,13 +12989,13 @@ packages:
       dag-jose: 1.0.0
       debug: 4.3.4(supports-color@8.1.1)
       err-code: 3.0.1
-      ipfs-core-types: 0.10.3(node-fetch@2.6.12)
-      ipfs-core-utils: 0.14.3(node-fetch@2.6.12)
+      ipfs-core-types: 0.10.3(node-fetch@3.3.2)
+      ipfs-core-utils: 0.14.3(node-fetch@3.3.2)
       ipfs-utils: 9.0.14
       it-first: 1.0.7
       it-last: 1.0.6
       merge-options: 3.0.4
-      multiaddr: 10.0.1(node-fetch@2.6.12)
+      multiaddr: 10.0.1(node-fetch@3.3.2)
       multiformats: 9.9.0
       parse-duration: 1.1.0
       stream-to-it: 0.2.4
@@ -15223,21 +15223,21 @@ packages:
   /ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
 
-  /multiaddr-to-uri@8.0.0(node-fetch@2.6.12):
+  /multiaddr-to-uri@8.0.0(node-fetch@3.3.2):
     resolution: {integrity: sha512-dq4p/vsOOUdVEd1J1gl+R2GFrXJQH8yjLtz4hodqdVbieg39LvBOdMQRdQnfbg5LSM/q1BYNVf5CBbwZFFqBgA==}
     deprecated: This module is deprecated, please upgrade to @multiformats/multiaddr-to-uri
     dependencies:
-      multiaddr: 10.0.1(node-fetch@2.6.12)
+      multiaddr: 10.0.1(node-fetch@3.3.2)
     transitivePeerDependencies:
       - node-fetch
       - supports-color
     dev: false
 
-  /multiaddr@10.0.1(node-fetch@2.6.12):
+  /multiaddr@10.0.1(node-fetch@3.3.2):
     resolution: {integrity: sha512-G5upNcGzEGuTHkzxezPrrD6CaIHR9uo+7MwqhNVcXTs33IInon4y7nMiGxl2CY5hG7chvYQUQhz5V52/Qe3cbg==}
     deprecated: This module is deprecated, please upgrade to @multiformats/multiaddr
     dependencies:
-      dns-over-http-resolver: 1.2.3(node-fetch@2.6.12)
+      dns-over-http-resolver: 1.2.3(node-fetch@3.3.2)
       err-code: 3.0.1
       is-ip: 3.1.0
       multiformats: 9.9.0
@@ -15337,6 +15337,14 @@ packages:
       node-fetch: '*'
     dependencies:
       node-fetch: 2.6.12
+    dev: false
+
+  /native-fetch@3.0.0(node-fetch@3.3.2):
+    resolution: {integrity: sha512-G3Z7vx0IFb/FQ4JxvtqGABsOTIqRWvgQz6e+erkB+JJD6LrszQtMozEHI4EkmgZQvnGHrpLVzUWk7t4sJCIkVw==}
+    peerDependencies:
+      node-fetch: '*'
+    dependencies:
+      node-fetch: 3.3.2
     dev: false
 
   /natural-compare-lite@1.4.0:
@@ -17088,7 +17096,7 @@ packages:
       ast-types: 0.15.2
       esprima: 4.0.1
       source-map: 0.6.1
-      tslib: 2.6.1
+      tslib: 2.6.2
     dev: true
 
   /recast@0.23.3:
@@ -17099,7 +17107,7 @@ packages:
       ast-types: 0.16.1
       esprima: 4.0.1
       source-map: 0.6.1
-      tslib: 2.6.1
+      tslib: 2.6.2
     dev: true
 
   /receptacle@1.3.2:
@@ -17541,7 +17549,7 @@ packages:
   /rxjs@7.8.1:
     resolution: {integrity: sha512-AA3TVj+0A2iuIoQkWEK/tqFjBq2j+6PO6Y0zJcvzLAFhEFIO3HL0vls9hWLncZbAAbK0mar7oZ4V079I/qPMxg==}
     dependencies:
-      tslib: 2.6.1
+      tslib: 2.6.2
 
   /safe-array-concat@1.0.0:
     resolution: {integrity: sha512-9dVEFruWIsnie89yym+xWTAYASdpw3CJV7Li/6zBewGf9z2i1j31rP6jnY0pHEO4QZh6N0K11bFjWmdR8UGdPQ==}
@@ -18554,7 +18562,7 @@ packages:
     engines: {node: ^14.18.0 || >=16.0.0}
     dependencies:
       '@pkgr/utils': 2.4.2
-      tslib: 2.6.1
+      tslib: 2.6.2
     dev: false
 
   /table-layout@1.0.2:
@@ -19109,9 +19117,6 @@ packages:
 
   /tslib@2.4.1:
     resolution: {integrity: sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==}
-
-  /tslib@2.6.1:
-    resolution: {integrity: sha512-t0hLfiEKfMUoqhG+U1oid7Pva4bbDPHYfJNiB7BiIjRkj1pyC++4N3huJfqY6aRH6VTB0rvtzQwjM4K6qpfOig==}
 
   /tslib@2.6.2:
     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
