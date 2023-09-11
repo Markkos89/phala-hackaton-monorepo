@@ -1,0 +1,58 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["**/.env.*local"],
+  "globalEnv": ["CI", "NODE_ENV"],
+  "pipeline": {
+    "clean": {
+      "cache": false
+    },
+    "dev": {
+      "cache": false,
+      "dependsOn": ["^build", "^compile"],
+      "persistent": true
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "env": ["ANALYZE", "GITHUB_REPOSITORY"],
+      "outputs": [".next/**", "dist/**", "cache/**", "artifacts/**"]
+    },
+    "storybook:dev": {
+      "cache": false,
+      "dependsOn": ["^build"],
+      "persistent": true
+    },
+    "storybook:build": {
+      "dependsOn": ["^build"],
+      "outputs": ["storybook-static/**"]
+    },
+    "test:e2e": {
+      "cache": false,
+      "dependsOn": ["^build"]
+    },
+    "test:unit": {
+      "cache": false,
+      "dependsOn": ["^build"]
+    },
+    "coupling-graph": {
+      "cache": false,
+      "dependsOn": ["^build"]
+    },
+    "compile": {
+      "dependsOn": ["^compile"],
+      "env": [
+        "POLYGON_RPC_URL",
+        "MUMBAI_RPC_URL",
+        "DEPLOYER_PRIVATE_KEY",
+        "POLYGONSCAN_API_KEY",
+        "POLYGON_LENSAPI_ORACLE_ENDPOINT",
+        "MUMBAI_LENSAPI_ORACLE_ENDPOINT",
+        "POLYGON_CONSUMER_CONTRACT_ADDRESS",
+        "MUMBAI_CONSUMER_CONTRACT_ADDRESS",
+        "POLKADOT_WALLET_PASSPHRASE",
+        "POLKADOT_WALLET_SURI",
+        "WORKFLOW_ID"
+      ],
+      "outputs": [".next/**", "dist/**", "cache/**", "artifacts/**"]
+    }
+  }
+}

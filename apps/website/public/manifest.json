@@ -1,0 +1,42 @@
+{
+  "name": "Boilerplate Next + Typescript",
+  "short_name": "Boilerplate Next",
+  "icons": [
+    {
+      "src": "/assets/icons/152x152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/167x167.png",
+      "sizes": "167x167",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/180x180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icons/384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "background_color": "#06092B",
+  "description": "Boilerlate utilizando Typescript, React, NextJS e Styled Components!",
+  "display": "fullscreen",
+  "start_url": "/",
+  "theme_color": "#06092B"
+}
