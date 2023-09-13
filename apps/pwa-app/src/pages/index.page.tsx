@@ -2,6 +2,8 @@ import type { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import Head from "next/head";
 import { Container } from "ui";
 
+import Login from "@/components/Login";
+
 export default function Home({ pwa }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   return (
     <>
@@ -25,6 +27,9 @@ export default function Home({ pwa }: InferGetServerSidePropsType<typeof getServ
             {`SSR Working ? ${pwa ? "SSR ON!" : "Not Working - Something went wrong?"}`}
           </div>
         </main>
+      </Container>
+      <Container>
+        <Login />
       </Container>
     </>
   );
