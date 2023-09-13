@@ -35,6 +35,7 @@ function Config() {
 
       // Handle the response as needed
 
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       const responseData: ConfigApiResponse = await response.json();
       console.log("Response from server:", responseData);
     } catch (error) {
