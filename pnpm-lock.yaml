@@ -87,7 +87,56 @@ importers:
         specifier: 5.1.6
         version: 5.1.6
 
-  apps/app:
+  apps/claim-app-pwa:
+    dependencies:
+      '@headlessui/react':
+        specifier: 1.7.15
+        version: 1.7.15(react-dom@18.2.0)(react@18.2.0)
+      clsx:
+        specifier: 2.0.0
+        version: 2.0.0
+      next:
+        specifier: 13.4.12
+        version: 13.4.12(@babel/core@7.22.9)(react-dom@18.2.0)(react@18.2.0)
+      next-themes:
+        specifier: 0.2.1
+        version: 0.2.1(next@13.4.12)(react-dom@18.2.0)(react@18.2.0)
+      react:
+        specifier: 18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: 18.2.0
+        version: 18.2.0(react@18.2.0)
+      ui:
+        specifier: workspace:*
+        version: link:../../packages/ui
+      utils:
+        specifier: workspace:*
+        version: link:../../packages/utils
+    devDependencies:
+      jest-config:
+        specifier: workspace:*
+        version: link:../../packages/jest-config
+      lighthouse-config:
+        specifier: workspace:*
+        version: link:../../packages/lighthouse-config
+      next-config:
+        specifier: workspace:*
+        version: link:../../packages/next-config
+      playwright-config:
+        specifier: workspace:*
+        version: link:../../packages/playwright-config
+      storybook-config:
+        specifier: workspace:*
+        version: link:../../packages/storybook-config
+      tailwindcss-config:
+        specifier: workspace:*
+        version: link:../../packages/tailwindcss-config
+      typescript-config:
+        specifier: workspace:*
+        version: link:../../packages/typescript-config
+
+  apps/config-api:
     dependencies:
       body-parser:
         specifier: ^1.20.2
@@ -264,56 +313,7 @@ importers:
         specifier: workspace:*
         version: link:../../packages/typescript-config
 
-  apps/website:
-    dependencies:
-      '@headlessui/react':
-        specifier: 1.7.15
-        version: 1.7.15(react-dom@18.2.0)(react@18.2.0)
-      clsx:
-        specifier: 2.0.0
-        version: 2.0.0
-      next:
-        specifier: 13.4.12
-        version: 13.4.12(@babel/core@7.22.9)(react-dom@18.2.0)(react@18.2.0)
-      next-themes:
-        specifier: 0.2.1
-        version: 0.2.1(next@13.4.12)(react-dom@18.2.0)(react@18.2.0)
-      react:
-        specifier: 18.2.0
-        version: 18.2.0
-      react-dom:
-        specifier: 18.2.0
-        version: 18.2.0(react@18.2.0)
-      ui:
-        specifier: workspace:*
-        version: link:../../packages/ui
-      utils:
-        specifier: workspace:*
-        version: link:../../packages/utils
-    devDependencies:
-      jest-config:
-        specifier: workspace:*
-        version: link:../../packages/jest-config
-      lighthouse-config:
-        specifier: workspace:*
-        version: link:../../packages/lighthouse-config
-      next-config:
-        specifier: workspace:*
-        version: link:../../packages/next-config
-      playwright-config:
-        specifier: workspace:*
-        version: link:../../packages/playwright-config
-      storybook-config:
-        specifier: workspace:*
-        version: link:../../packages/storybook-config
-      tailwindcss-config:
-        specifier: workspace:*
-        version: link:../../packages/tailwindcss-config
-      typescript-config:
-        specifier: workspace:*
-        version: link:../../packages/typescript-config
-
-  apps/website-ssr:
+  apps/pwa-app:
     dependencies:
       '@headlessui/react':
         specifier: 1.7.15
@@ -4547,7 +4547,7 @@ packages:
       is-glob: 4.0.3
       open: 9.1.0
       picocolors: 1.0.0
-      tslib: 2.6.1
+      tslib: 2.6.2
     dev: false
 
   /@playwright/test@1.36.1:
@@ -8279,14 +8279,14 @@ packages:
     resolution: {integrity: sha512-c27loCv9QkZinsa5ProX751khO9DJl/AcB5c2KNtA6NRvHKS0PgLfcftz72KVq504vB0Gku5s2kUZzDBvQWvHg==}
     engines: {node: '>=4'}
     dependencies:
-      tslib: 2.6.1
+      tslib: 2.6.2
     dev: true
 
   /ast-types@0.16.1:
     resolution: {integrity: sha512-6t10qk83GOG8p0vKmaCr8eiilZwO171AvbROMtvvNiwrTly62t+7XkA8RdIIVbpMhCASAsxgAzdRSwh6nw/5Dg==}
     engines: {node: '>=4'}
     dependencies:
-      tslib: 2.6.1
+      tslib: 2.6.2
     dev: true
 
   /astral-regex@2.0.0:
@@ -17248,7 +17248,7 @@ packages:
       ast-types: 0.15.2
       esprima: 4.0.1
       source-map: 0.6.1
-      tslib: 2.6.1
+      tslib: 2.6.2
     dev: true
 
   /recast@0.23.3:
@@ -17259,7 +17259,7 @@ packages:
       ast-types: 0.16.1
       esprima: 4.0.1
       source-map: 0.6.1
-      tslib: 2.6.1
+      tslib: 2.6.2
     dev: true
 
   /receptacle@1.3.2:
@@ -17701,7 +17701,7 @@ packages:
   /rxjs@7.8.1:
     resolution: {integrity: sha512-AA3TVj+0A2iuIoQkWEK/tqFjBq2j+6PO6Y0zJcvzLAFhEFIO3HL0vls9hWLncZbAAbK0mar7oZ4V079I/qPMxg==}
     dependencies:
-      tslib: 2.6.1
+      tslib: 2.6.2
 
   /safe-array-concat@1.0.0:
     resolution: {integrity: sha512-9dVEFruWIsnie89yym+xWTAYASdpw3CJV7Li/6zBewGf9z2i1j31rP6jnY0pHEO4QZh6N0K11bFjWmdR8UGdPQ==}
@@ -18743,7 +18743,7 @@ packages:
     engines: {node: ^14.18.0 || >=16.0.0}
     dependencies:
       '@pkgr/utils': 2.4.2
-      tslib: 2.6.1
+      tslib: 2.6.2
     dev: false
 
   /table-layout@1.0.2:
@@ -19304,9 +19304,6 @@ packages:
 
   /tslib@2.4.1:
     resolution: {integrity: sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==}
-
-  /tslib@2.6.1:
-    resolution: {integrity: sha512-t0hLfiEKfMUoqhG+U1oid7Pva4bbDPHYfJNiB7BiIjRkj1pyC++4N3huJfqY6aRH6VTB0rvtzQwjM4K6qpfOig==}
 
   /tslib@2.6.2:
     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}

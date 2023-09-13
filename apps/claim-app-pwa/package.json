@@ -1,18 +1,20 @@
 {
   "private": true,
-  "name": "website-ssr",
+  "name": "claim-app",
   "version": "0.0.0",
   "scripts": {
     "clean": "rm -rf .lighthouseci .next .swc .turbo coverage dist e2e-report e2e-results out storybook-static",
-    "dev": "next dev --port 3001",
+    "dev": "next dev --port 3002",
     "build": "next build",
     "lint": "next lint",
     "test:e2e": "playwright test",
     "test:unit": "jest --ci --coverage",
     "test:watch": "jest --watch",
-    "storybook:dev": "storybook dev --quiet --port 6001",
+    "storybook:dev": "storybook dev --quiet --port 6002",
     "storybook:build": "storybook build",
-    "coupling-graph": "npx madge --extensions js,jsx,ts,tsx,css,md,mdx ./ --exclude '.next|tailwind.config.js|reset.d.ts|prettier.config.js|postcss.config.js|playwright.config.ts|next.config.js|next-env.d.ts|instrumentation.ts|e2e/|README.md|.storybook/|.eslintrc.js' --image graph.svg"
+    "coupling-graph": "npx madge --extensions js,jsx,ts,tsx,css,md,mdx ./ --exclude '.next|tailwind.config.js|reset.d.ts|prettier.config.js|postcss.config.js|playwright.config.ts|next.config.js|next-env.d.ts|instrumentation.ts|e2e/|README.md|.storybook/|.eslintrc.js' --image graph.svg",
+    "generate": "yarn plop --plopfile generators/plopfile.cjs",
+    "postinstall": "husky install"
   },
   "dependencies": {
     "@headlessui/react": "1.7.15",
